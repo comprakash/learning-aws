@@ -1,6 +1,6 @@
 import boto3
 
-client = boto3.client('dynamodb', region_name='us-east-1')
+client = boto3.client('dynamodb', endpoint_url='http://localhost:8000')
 
 try:
     resp = client.delete_table(

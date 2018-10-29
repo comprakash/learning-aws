@@ -2,7 +2,7 @@ import boto3
 
 # Boto3 is the AWS SDK library for Python.
 # We can use the low-level client to make API calls to DynamoDB.
-client = boto3.client('dynamodb', region_name='us-east-1')
+client = boto3.client('dynamodb', endpoint_url='http://localhost:8000')
 
 try:
     resp = client.update_table(
